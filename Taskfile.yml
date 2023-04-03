@@ -1,0 +1,14 @@
+version: '3'
+
+tasks:
+  default:
+    cmds:
+      - echo GQL-TODO
+  client:
+    dir: client
+    cmds:
+      - pnpm run dev
+  server:
+    dir: server
+    cmds:
+      - pnpm run start
