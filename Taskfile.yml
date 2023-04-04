@@ -12,3 +12,15 @@ tasks:
     dir: server
     cmds:
       - pnpm run start
+  db-up:
+    dir: docker
+    cmds:
+      - docker-compose up -d
+  db-down:
+    dir: docker
+    cmds:
+      - docker-compose down
+  db-in:
+    dir: docker
+    cmds:
+      - docker exec -it postgres /bin/sh
