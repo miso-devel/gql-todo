@@ -1,25 +1,33 @@
 # gql-todo
 
 ### client
+
 ```
 task client
 ```
 
 ### server
+
 ```
 task server
 ```
+
 ### db
 
-db立ち上げ
+db 立ち上げ
+
 ```
 task db-up
 ```
-db落とす
+
+db 落とす
+
 ```
 task db-down
 ```
-dbの中に入る
+
+db の中に入る
+
 ```
 task db-in
 ```
