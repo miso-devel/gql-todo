@@ -1,14 +1,10 @@
-import { withUrqlClient, initUrqlClient } from 'next-urql';
-import { ssrExchange, dedupExchange, cacheExchange, fetchExchange, useQuery } from 'urql';
-import ClientPage from '@/components/ClientPage';
-import ServerPage from '@/components/ServerPage';
+import { ClientPage } from '@/components/ClientPage'
 
-export default function Sample(){
-    return(
-        <div>
-             <p></p> serversideComponent
-            <ClientPage/>
-        </div>
-    )
-
+export default function Sample() {
+  return (
+    <div>
+      <p>サーバーサイド</p>
+      <ClientPage />
+    </div>
+  )
 }
