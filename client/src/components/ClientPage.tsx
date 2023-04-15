@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react'
+import { Suspense, useState } from 'react'
 import { ServerPage } from './ServerPage'
 export const ClientPage = () => {
   const [name, setName] = useState('サンプル')
@@ -8,7 +8,6 @@ export const ClientPage = () => {
       <p>クライアントサイド</p>
       <p>名前：{name}</p>
       <button onClick={() => setName('miso')}>ボタン</button>
-      <ServerPage name={name} click={setName} />
     </div>
   )
 }
