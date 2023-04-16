@@ -11,5 +11,8 @@
       "name": "Server",
       "path": "server"
     }
-  ]
+  ],
+  "settings": {
+    "jest.disabledWorkspaceFolders": ["Client"]
+  }
 }

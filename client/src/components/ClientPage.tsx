@@ -1,13 +1,17 @@
 'use client'
-import { Suspense, useState } from 'react'
-import { ServerPage } from './ServerPage'
-export const ClientPage = () => {
-  const [name, setName] = useState('サンプル')
+import { TTodo } from '@/app/debug/page'
+import { useState } from 'react'
+
+export const ClientPage = (todo: TTodo) => {
+  const [id, setId] = useState<number>(todo.id)
   return (
-    <div>
-      <p>クライアントサイド</p>
-      <p>名前：{name}</p>
-      <button onClick={() => setName('miso')}>ボタン</button>
+    <div className='flex'>
+      <p className='my-3'>
+        {id}: {todo.title}
+      </p>
+      <button className='ms-5 ' onClick={() => setId(id + 1)}>
+        <span className='p-2 bg-slate-300 rounded-md'>button</span>
+      </button>
     </div>
   )
 }

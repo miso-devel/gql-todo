@@ -1,18 +1,9 @@
-const fetchJsonData = async () => {
-  return await fetch('https://jsonplaceholder.typicode.com/todos/1').then((response) => {
-    return response.json()
-  })
-}
+import { TTodo } from '@/app/debug/page'
 
-export const ServerPage = async (props: any) => {
-  const value = props.name == 'サンプル' ? '正解' : '不正解'
-  const data = await fetchJsonData()
-  console.log(data)
+export const ServerPage = (todo: TTodo) => {
   return (
-    <div>
-      <p>サーバーサイド</p>
-      <p>{value}</p>
-      {/* <button onClick={() => props.click('server-miso2')}>ボタン</button> */}
-    </div>
+    <p className='my-3'>
+      {todo.id}: {todo.title}
+    </p>
   )
 }

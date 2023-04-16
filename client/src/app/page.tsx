@@ -1,7 +1,3 @@
-  export default function Home() {
-  return (
-    <main>
-      Next.js
-    </main>
-  )
+export default function Home() {
+  return <main>Next.js</main>
 }
